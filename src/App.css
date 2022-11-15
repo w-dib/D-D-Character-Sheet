@@ -16,14 +16,12 @@ Input{
   margin-bottom: 0px;
 }
 
-/* INPUT UNDERLINE */
-/* .dnd-input {
-  border-bottom: 1px solid #000;
-
-} */
+.topsectiondropdown{
+  margin-top:15px;
+}
 
 .dndlogo{
-width:100%;
+max-width:80%;
 
 }
 
