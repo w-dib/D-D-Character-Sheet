@@ -3,3 +3,30 @@
   padding: 2rem;
 }
 
+label{
+  display: inline-block;
+  font-size: 8px;
+}
+
+Input{
+  /* border-bottom: 1px solid #000; */
+  width: 100%;
+  margin-top: 15px;
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+/* INPUT UNDERLINE */
+/* .dnd-input {
+  border-bottom: 1px solid #000;
+
+} */
+
+.dndlogo{
+width:100%;
+
+}
+
+.footertext{
+  font-size:8px;
+}
