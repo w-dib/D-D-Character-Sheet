@@ -28,3 +28,13 @@ max-width:80%;
 .footertext{
   font-size:8px;
 }
+
+.navfillwidth{
+  width:100%;
+  border-radius: 5px;
+}
+
+.d-and-d-statbox-modifier {
+  text-align: center;
+  font-size: 24px;
+}
