@@ -2,7 +2,7 @@
   "name": "dnd-char",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://w-dib.github.io",
+  "homepage":"https://w-dib.github.io/D-D-Character-Sheet",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
