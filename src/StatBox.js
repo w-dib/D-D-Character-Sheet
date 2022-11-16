@@ -4,8 +4,9 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Button from '@mui/material/Button';
 
 export default function StatBox(props) {
+  
     return (
-      <div className="col text-center border border-danger rounded mt-2">
+      <div className="col text-center border border-danger rounded mt-2 mb-2">
         <label>{props.stats}</label>
         <div className="d-and-d-statbox-modifier">0</div>
         <div className="row justify-content-center mb-2">
