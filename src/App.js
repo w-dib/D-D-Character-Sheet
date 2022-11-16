@@ -2,10 +2,6 @@ import "./App.css";
 import TopSection from "./TopSection"
 import DnDLogo from "./images/dnd-logo.png"
 
-<BrowserRouter basename={window.location.pathname || ''}>
-  <Route exact path="/" component={Index} />
-</BrowserRouter>
-
 function App() {
   return (
     <div className="App">
