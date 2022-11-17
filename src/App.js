@@ -4,8 +4,7 @@ import DnDLogo from "./images/dnd-logo.png"
 import StatBox from "./StatBox"
 function App() {
   return (
-    <div className="App">
-      
+    <div className="App ">
       {/* NAVBAR */}
       <nav
         className="navbar mb-4 navfillwidth bg-danger"
@@ -17,13 +16,14 @@ function App() {
       </nav>
 
       {/* TOP SECTION */}
-      <div className="container-fluid row mb-4">
-          <div className="col border border-danger rounded mr-3 align-self-center">
+      <div className="container-flex">
+      <div className="row mb-4" style={{margin: "auto"}}>
+          <div className="col-12 col-lg-2 border border-danger rounded mr-3 align-self-center">
             <img src={DnDLogo} alt="dnd-logo" className="dndlogo" />
             <TopSection label="CHARACTER NAME" />
           </div>
-
-          <div className="col-9 border border-danger rounded">
+          
+          <div className="col border border-danger rounded">
             <div className="row">
               <div class="form-group col text-center topsectiondropdown">
                 <select class="form-control" id="exampleFormControlSelect1">
@@ -66,10 +66,12 @@ function App() {
             </div>
           </div>
       </div>
+      </div>
 
       {/* MAIN SECTION */}
-      <div className="row container-fluid">
-        <div className="col-2 border border-danger rounded">
+      <div className="container-flex">
+      <div className="row " style={{margin: "auto"}}>
+        <div className="col-lg-2 col-sm-12 border border-danger rounded">
           <StatBox stats="STRENGTH"/>
           <StatBox stats="DEXTERITY"/>
           <StatBox stats="CONSTITUION"/>
@@ -80,7 +82,7 @@ function App() {
         <div className="col-md-4">2</div>
         <div className="col-md-4">3</div>
       </div>
-
+      </div>
       {/* FOOTER SECTION */}
       <footer class="my-4 border-top">
         
