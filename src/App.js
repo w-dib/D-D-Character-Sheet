@@ -6,10 +6,7 @@ function App() {
   return (
     <div className="App ">
       {/* NAVBAR */}
-      <nav
-        className="navbar mb-4 navfillwidth bg-danger"
-        // style={{ backgroundColor: "#FF2E2E" }}
-      >
+      <nav className="navbar mb-4 navfillwidth bg-danger">
         <span className="navbar-brand mb-0 h1" style={{ color: "#FFFFFF" }}>
           D&D Character Creator
         </span>
@@ -17,12 +14,12 @@ function App() {
 
       {/* TOP SECTION */}
       <div className="container-flex">
-      <div className="row mb-4" style={{margin: "auto"}}>
+        <div className="row mb-4 gx-3" style={{ margin: "auto" }}>
           <div className="col-12 col-lg-2 border border-danger rounded mr-3 align-self-center">
             <img src={DnDLogo} alt="dnd-logo" className="dndlogo" />
             <TopSection label="CHARACTER NAME" />
           </div>
-          
+
           <div className="col border border-danger rounded">
             <div className="row">
               <div class="form-group col text-center topsectiondropdown">
@@ -65,27 +62,27 @@ function App() {
               <TopSection label="PLAYER NAME" />
             </div>
           </div>
-      </div>
+        </div>
       </div>
 
       {/* MAIN SECTION */}
       <div className="container-flex">
-      <div className="row " style={{margin: "auto"}}>
-        <div className="col-lg-2 col-sm-12 border border-danger rounded">
-          <StatBox stats="STRENGTH"/>
-          <StatBox stats="DEXTERITY"/>
-          <StatBox stats="CONSTITUION"/>
-          <StatBox stats="INTELLIGENCE"/>
-          <StatBox stats="WISDOM"/>
-          <StatBox stats="CHARISMA"/>
+        <div className="row" style={{ margin: "auto" }}>
+          <div className="col col-lg-2 col-sm-6 border border-danger rounded">
+            <StatBox stats="STRENGTH" />
+            <StatBox stats="DEXTERITY" />
+            <StatBox stats="CONSTITUION" />
+            <StatBox stats="INTELLIGENCE" />
+            <StatBox stats="WISDOM" />
+            <StatBox stats="CHARISMA" />
+          </div>
+          <div className="col col-md-4 col-sm-3">2</div>
+          <div className="col-md-4">3</div>
         </div>
-        <div className="col-md-4">2</div>
-        <div className="col-md-4">3</div>
       </div>
-      </div>
+
       {/* FOOTER SECTION */}
       <footer class="my-4 border-top">
-        
         <span class="mb-3 mb-md-0 text-muted footertext">
           Created by Walid Dib
         </span>

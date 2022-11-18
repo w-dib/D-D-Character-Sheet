@@ -11,46 +11,49 @@ export default function StatBox(props) {
 
 }
 
+let modifier = "15"
+if (count && !isNaN){
+  const modifierNum = Math.floor(Number(count)-10/2)
+  if(modifierNum > 0){
+    modifier = "+" + modifierNum
+  }
+  else{
+    modifier = modifierNum.toString()
+  }
+}
+
+
 const decrementCount = () => {
   setCount(count-1);  
 }
 
-// const [modifier, setModifier] = React.useState(1)
-
-// const updateModifier = () => {
-//   if (count===1) {
-//     modifier = -1;
-//   }
-//   else if () {
-//     modifier = ??;
-//   }
-//   else if () {
-//     modifier = ??;
-//   }
-//   else if () {
-//     modifier = ??;
-//   }
-//   else if () {
-//     modifier = ??;
-//   }
-// }
     return (
       <div className="col text-center border border-danger rounded mt-2 mb-2">
         <label>{props.stats}</label>
-        <div className="d-and-d-statbox-modifier">0</div>
+        <div className="d-and-d-statbox-modifier">{modifier}</div>
         <div className="row justify-content-center mb-2">
-          <Button 
-          onClick={decrementCount} 
-          size="sm" 
-          variant="contained" 
-          color="error">
-            <ArrowBackIosIcon fontSize="small"/>
+          <Button
+            onClick={decrementCount}
+            onChange={(e) => count.onChange(count, e.target.value)}
+            size="sm"
+            variant="contained"
+            color="error"
+          >
+            <ArrowBackIosIcon fontSize="small" />
           </Button>
-          <input className="form-control text-center w-25 my-0 mx-1 h-50 text" 
-          value={count}
-          />
-          <Button onClick={incrementCount} size="sm" variant="contained" color="error">
-            <ArrowForwardIosIcon fontSize="small"/>
+          <div>
+            <span className="mx-1 border-danger text-center dndstatrow">
+              {count}
+            </span>
+          </div>
+          <Button
+            onClick={incrementCount}
+            onChange={(e) => count.onChange(count, e.target.value)}
+            size="sm"
+            variant="contained"
+            color="error"
+          >
+            <ArrowForwardIosIcon fontSize="small" />
           </Button>
         </div>
       </div>

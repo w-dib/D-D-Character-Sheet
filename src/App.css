@@ -5,11 +5,10 @@
 
 label{
   display: inline-block;
-  font-size: 8px;
+  font-size: 12px;
 }
 
 Input{
-  /* border-bottom: 1px solid #000; */
   width: 100%;
   margin-top: 15px;
   font-size: 16px;
@@ -25,10 +24,6 @@ max-width:80%;
 
 }
 
-.footertext{
-  font-size:8px;
-}
-
 .navfillwidth{
   width:100%;
   border-radius: 5px;
@@ -37,4 +32,18 @@ max-width:80%;
 .d-and-d-statbox-modifier {
   text-align: center;
   font-size: 24px;
+}
+
+.dndstatrow{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding-top: 18%;
+  border: 2px solid #000;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.footertext{
+  font-size:10px;
 }
