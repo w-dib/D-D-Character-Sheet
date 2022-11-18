@@ -1,7 +1,4 @@
 import React from "react"
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import Button from '@mui/material/Button';
 
 export default function StatBox(props) {
   const[count, setCount] = React.useState(8)
@@ -26,9 +23,9 @@ const decrementCount = () => {
 }
 
     return (
-      <div className="col text-center border border-danger rounded mt-2 mb-2">
+      <div className="col bg-light text-center border rounded-top mt-2 mb-2">
         <label>{props.stats}</label>
-        <div className="d-and-d-statbox-modifier">{modifier}</div>
+        <div className="display-4 text-muted d-and-d-statbox-modifier">{modifier}</div>
         <div className="row justify-content-center mb-2">
           <button type="button" class="btn btn-danger align-self-center" onClick={decrementCount}>
             <svg

@@ -4,7 +4,7 @@
 }
 
 label{
-  display: inline-block;
+  display: inline;
   font-size: 12px;
 }
 
@@ -31,7 +31,7 @@ max-width:80%;
 
 .d-and-d-statbox-modifier {
   text-align: center;
-  font-size: 24px;
+  font-size: 35px;
 }
 
 .dndstatrow{

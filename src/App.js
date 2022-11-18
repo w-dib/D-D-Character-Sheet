@@ -1,8 +1,13 @@
 import "./App.css";
+import React from "react"
 import TopSection from "./TopSection"
 import DnDLogo from "./images/dnd-logo.png"
 import StatBox from "./StatBox"
+
 function App() {
+
+  // const [randomName,setRandomName] = React.useState("")
+
   return (
     <div className="App ">
       {/* NAVBAR */}
@@ -11,16 +16,19 @@ function App() {
           D&D Character Creator
         </span>
       </nav>
-
       {/* TOP SECTION */}
       <div className="container-flex">
         <div className="row mb-4 gx-3" style={{ margin: "auto" }}>
-          <div className="col-12 col-lg-2 border border-danger rounded mr-3 align-self-center">
+          <div className="col-12 col-lg-2 bg-light border border-danger rounded mr-3 ">
             <img src={DnDLogo} alt="dnd-logo" className="dndlogo" />
+
             <TopSection label="CHARACTER NAME" />
+            <a href="#" class="link-danger">
+              Randomize 🎲!
+            </a>
           </div>
 
-          <div className="col border border-danger rounded">
+          <div className="col border border-danger rounded bg-light">
             <div className="row">
               <div class="form-group col text-center topsectiondropdown">
                 <select class="form-control" id="exampleFormControlSelect1">
@@ -43,7 +51,7 @@ function App() {
               <TopSection label="BACKGROUND" />
             </div>
 
-            <div className="row">
+            <div className="row ">
               <div class="form-group col text-center topsectiondropdown">
                 <select class="form-control" id="exampleFormControlSelect1">
                   <option>Elf</option>
@@ -64,11 +72,11 @@ function App() {
           </div>
         </div>
       </div>
-
       {/* MAIN SECTION */}
       <div className="container-flex">
         <div className="row" style={{ margin: "auto" }}>
-          <div className="col col-lg-2 col-sm-6 border border-danger rounded">
+          {/* STATBOX */}
+          <div className="col col-lg-2 col-sm-6 mr-3 border border-danger rounded bg-danger">
             <StatBox stats="STRENGTH" />
             <StatBox stats="DEXTERITY" />
             <StatBox stats="CONSTITUION" />
@@ -76,11 +84,28 @@ function App() {
             <StatBox stats="WISDOM" />
             <StatBox stats="CHARISMA" />
           </div>
-          <div className="col col-md-4 col-sm-3">2</div>
+
+          <div className="col col-md-4 col-sm-3 bg-danger rounded">
+            {/* INSPIRATION */}
+            <div className="col bg-light text-center border border-danger rounded mt-2 mb-2">
+              INSPIRATION
+            </div>
+            {/* PROFICIENCY BONUS  */}
+            <div className="col bg-light text-center border border-danger rounded mt-2 mb-2">
+              PROFICIENCY BONUS
+            </div>
+            {/* SAVING THROWS  */}
+            <div className="col bg-light text-center border border-danger rounded mt-2 mb-2">
+              SAVING THROWS
+            </div>
+            {/* SKILLS  */}
+            <div className="col bg-light text-center border border-danger rounded mt-2 mb-2">
+              SKILLS
+            </div>
+          </div>
           <div className="col-md-4">3</div>
         </div>
       </div>
-
       {/* FOOTER SECTION */}
       <footer class="my-4 border-top">
         <span class="mb-3 mb-md-0 text-muted footertext">
