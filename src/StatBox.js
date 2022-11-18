@@ -11,17 +11,15 @@ export default function StatBox(props) {
 
 }
 
-let modifier = "15"
-if (count && !isNaN){
-  const modifierNum = Math.floor(Number(count)-10/2)
-  if(modifierNum > 0){
-    modifier = "+" + modifierNum
-  }
-  else{
-    modifier = modifierNum.toString()
-  }
-}
+let modifierNum = Math.floor(((count)-10)/2)
 
+let modifier = ""
+if(modifierNum > 0){
+  modifier = "+" + modifierNum
+}
+else{
+  modifier = modifierNum.toString()
+}
 
 const decrementCount = () => {
   setCount(count-1);  
@@ -32,29 +30,42 @@ const decrementCount = () => {
         <label>{props.stats}</label>
         <div className="d-and-d-statbox-modifier">{modifier}</div>
         <div className="row justify-content-center mb-2">
-          <Button
-            onClick={decrementCount}
-            onChange={(e) => count.onChange(count, e.target.value)}
-            size="sm"
-            variant="contained"
-            color="error"
-          >
-            <ArrowBackIosIcon fontSize="small" />
-          </Button>
+          <button type="button" class="btn btn-danger align-self-center" onClick={decrementCount}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-left"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+              />
+            </svg>
+          </button>
           <div>
             <span className="mx-1 border-danger text-center dndstatrow">
               {count}
             </span>
           </div>
-          <Button
-            onClick={incrementCount}
-            onChange={(e) => count.onChange(count, e.target.value)}
-            size="sm"
-            variant="contained"
-            color="error"
-          >
-            <ArrowForwardIosIcon fontSize="small" />
-          </Button>
+
+          <button type="button" class="btn btn-danger align-self-center" onClick={incrementCount}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     );
