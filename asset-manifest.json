@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/D-D-Character-Sheet/static/css/main.0907dd3f.css",
-    "main.js": "/D-D-Character-Sheet/static/js/main.0816b0b2.js",
+    "main.css": "/D-D-Character-Sheet/static/css/main.d48808e8.css",
+    "main.js": "/D-D-Character-Sheet/static/js/main.261ebdee.js",
     "static/js/787.722886f3.chunk.js": "/D-D-Character-Sheet/static/js/787.722886f3.chunk.js",
     "static/media/dnd-logo.png": "/D-D-Character-Sheet/static/media/dnd-logo.752de01a766935e8c5a7.png",
     "index.html": "/D-D-Character-Sheet/index.html",
-    "main.0907dd3f.css.map": "/D-D-Character-Sheet/static/css/main.0907dd3f.css.map",
-    "main.0816b0b2.js.map": "/D-D-Character-Sheet/static/js/main.0816b0b2.js.map",
+    "main.d48808e8.css.map": "/D-D-Character-Sheet/static/css/main.d48808e8.css.map",
+    "main.261ebdee.js.map": "/D-D-Character-Sheet/static/js/main.261ebdee.js.map",
     "787.722886f3.chunk.js.map": "/D-D-Character-Sheet/static/js/787.722886f3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0907dd3f.css",
-    "static/js/main.0816b0b2.js"
+    "static/css/main.d48808e8.css",
+    "static/js/main.261ebdee.js"
   ]
 }
