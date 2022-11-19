@@ -1,23 +1,21 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import "./App.css";
-import React from "react"
+import React, {useState} from "react"
 import TopSection from "./TopSection"
 import DnDLogo from "./images/dnd-logo.png"
 import StatBox from "./StatBox"
 import { nameByRace } from "fantasy-name-generator";
+import SavingThrows from "./SavingThrows";
 
 function App() {
 
-  // eslint-disable-next-line no-unused-vars
-  const [x,setCharacterName] = React.useState("")
-  const elfHero = nameByRace("elf", { gender: "male" })
-  function randomNameGenerator(){
-    return elfHero
-  }
-    const handleClick = () => {
-    setCharacterName(randomNameGenerator)
-  }
+  const [characterName, setCharacterName] = useState("");
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    const elfHero = nameByRace("elf", { gender: "male" });
+    setCharacterName(elfHero);
+  };
   return (
     <div className="App ">
       {/* NAVBAR */}
@@ -32,7 +30,7 @@ function App() {
           <div className="col-12 col-lg-2 bg-light border border-danger rounded mr-3 ">
             <img src={DnDLogo} alt="dnd-logo" className="dndlogo" />
 
-            <TopSection label="CHARACTER NAME" randomName={elfHero} />
+            <TopSection label="CHARACTER NAME" randomName={characterName} />
             <a href="#" class="link-danger" onClick={handleClick}>
               Randomize 🎲!
             </a>
@@ -97,19 +95,23 @@ function App() {
 
           <div className="col col-lg-2 col-sm-3 bg-danger rounded">
             {/* INSPIRATION */}
-            <TopSection label="Inspiration" />
-            {/* PROFICIENCY BONUS  */}
-            <div className="col bg-light text-center border border-danger rounded mt-2 mb-2">
+            {/* <div className="d-flex justify-content-start">
+              <input
+                className="dndstatrow form-control text-center align-self-center"
+                type="text"
+              ></input>
+              <div className="col bg-light text-center border border-danger rounded align-self-center">
+                PROFICIENCY BONUS
+              </div>
+            </div> */}
+            <div className="col">
+              <input className="dndstatrow form-control text-center align-self-center" type="text"></input>
+            </div>
+            <div className="col bg-light text-center border border-danger rounded align-self-center">
               PROFICIENCY BONUS
             </div>
-            {/* SAVING THROWS  */}
-            <div className="col bg-light text-center border border-danger rounded mt-2 mb-2">
-              SAVING THROWS
-            </div>
-            {/* SKILLS  */}
-            <div className="col bg-light text-center border border-danger rounded mt-2 mb-2">
-              SKILLS
-            </div>
+
+            <SavingThrows />
           </div>
           <div className="col-md-4">3</div>
         </div>
