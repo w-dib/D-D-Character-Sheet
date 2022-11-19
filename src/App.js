@@ -1,12 +1,22 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import "./App.css";
 import React from "react"
 import TopSection from "./TopSection"
 import DnDLogo from "./images/dnd-logo.png"
 import StatBox from "./StatBox"
+import { nameByRace } from "fantasy-name-generator";
 
 function App() {
 
-  // const [randomName,setRandomName] = React.useState("")
+  // eslint-disable-next-line no-unused-vars
+  const [x,setCharacterName] = React.useState("")
+  const elfHero = nameByRace("elf", { gender: "male" })
+  function randomNameGenerator(){
+    return elfHero
+  }
+    const handleClick = () => {
+    setCharacterName(randomNameGenerator)
+  }
 
   return (
     <div className="App ">
@@ -22,8 +32,8 @@ function App() {
           <div className="col-12 col-lg-2 bg-light border border-danger rounded mr-3 ">
             <img src={DnDLogo} alt="dnd-logo" className="dndlogo" />
 
-            <TopSection label="CHARACTER NAME" />
-            <a href="#" class="link-danger">
+            <TopSection label="CHARACTER NAME" randomName={elfHero} />
+            <a href="#" class="link-danger" onClick={handleClick}>
               Randomize 🎲!
             </a>
           </div>
@@ -87,7 +97,7 @@ function App() {
 
           <div className="col col-lg-2 col-sm-3 bg-danger rounded">
             {/* INSPIRATION */}
-            <TopSection label="Inspiration"/>
+            <TopSection label="Inspiration" />
             {/* PROFICIENCY BONUS  */}
             <div className="col bg-light text-center border border-danger rounded mt-2 mb-2">
               PROFICIENCY BONUS
