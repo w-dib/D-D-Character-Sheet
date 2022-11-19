@@ -27,7 +27,7 @@ function App() {
               Randomize 🎲!
             </a>
           </div>
-
+          <div class="col-sm-12 d-sm-block d-md-none mb-1">&nbsp;</div>
           <div className="col border border-danger rounded bg-light">
             <div className="row">
               <div class="form-group col text-center topsectiondropdown">
@@ -76,7 +76,7 @@ function App() {
       <div className="container-flex">
         <div className="row" style={{ margin: "auto" }}>
           {/* STATBOX */}
-          <div className="col col-lg-2 col-sm-6 mr-3 border border-danger rounded bg-danger">
+          <div className="col col-lg-2 col-sm-3 mr-3 border border-danger rounded bg-danger">
             <StatBox stats="STRENGTH" />
             <StatBox stats="DEXTERITY" />
             <StatBox stats="CONSTITUION" />
@@ -85,11 +85,9 @@ function App() {
             <StatBox stats="CHARISMA" />
           </div>
 
-          <div className="col col-md-4 col-sm-3 bg-danger rounded">
+          <div className="col col-lg-2 col-sm-3 bg-danger rounded">
             {/* INSPIRATION */}
-            <div className="col bg-light text-center border border-danger rounded mt-2 mb-2">
-              INSPIRATION
-            </div>
+            <TopSection label="Inspiration"/>
             {/* PROFICIENCY BONUS  */}
             <div className="col bg-light text-center border border-danger rounded mt-2 mb-2">
               PROFICIENCY BONUS
