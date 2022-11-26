@@ -5,6 +5,7 @@ import TopSection from "./TopSection"
 import DnDLogo from "./images/dnd-logo.png"
 import StatBox from "./StatBox"
 import { nameByRace } from "fantasy-name-generator";
+import Skills from "./Skills"
 
 function App() {
 
@@ -85,7 +86,7 @@ function App() {
       {/* MAIN SECTION */}
       <div className="container-flex">
         <div className="row" style={{ margin: "auto" }}>
-          {/* STATBOX */}
+          {/* LEFT SIDE */}
           <div className="col col-lg-2 col-sm-3 mr-3 border border-secondary rounded bg-secondary">
             <StatBox stats="STRENGTH" />
             <StatBox stats="DEXTERITY" />
@@ -94,7 +95,7 @@ function App() {
             <StatBox stats="WISDOM" />
             <StatBox stats="CHARISMA" />
           </div>
-
+          {/* MIDDLE SIDE */}
           <div className="col col-lg-2 col-sm-3 bg-secondary rounded">
             <div className="container">
               <div
@@ -132,7 +133,33 @@ function App() {
                 </div>
               </div>
             </div>
+            <div className="container-flex">
+           <div
+             className="row-12 bg-light my-3 border rounded"
+           >
+            <Skills skills="Acrobatics (Dex)"/>
+            <Skills skills="Animal Handling (Wis)"/>
+            <Skills skills="Arcana (Int)"/>
+            <Skills skills="Athletics (Str)"/>
+            <Skills skills="Deception (Cha)"/>
+            <Skills skills="History (Int)"/>
+            <Skills skills="Insight (Wis)"/>
+            <Skills skills="Intimidation (Cha)"/>
+            <Skills skills="Investigation (Int)"/>
+            <Skills skills="Medicine (Wis)"/>
+            <Skills skills="Nature (Int)"/>
+            <Skills skills="Perception (Wis)"/>
+            <Skills skills="Performance (Cha)"/>
+            <Skills skills="Persuasion (Cha)"/>
+            <Skills skills="Religion (Int)"/>
+            <Skills skills="Sleight of Hand (Dex)"/>
+            <Skills skills="Stealth (Dex)"/>
+            <Skills skills="Survival (Wis)"/>
+      </div>
+    </div>
           </div>
+
+          {/* RIGHT SIDE */}
           <div className="col-md-4">3</div>
         </div>
       </div>

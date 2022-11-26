@@ -5,7 +5,7 @@
 
 label{
   display: inline;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 #mainbox Input{
@@ -65,6 +65,11 @@ max-width:80%;
   border: 2px solid #000;
   font-weight: 700;
 }
+
+.dndinputcheck{
+  position:absolute;
+  left:1.25rem;
+  }
 
 .footertext{
   font-size:10px;
