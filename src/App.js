@@ -5,7 +5,6 @@ import TopSection from "./TopSection"
 import DnDLogo from "./images/dnd-logo.png"
 import StatBox from "./StatBox"
 import { nameByRace } from "fantasy-name-generator";
-import SavingThrows from "./SavingThrows";
 
 function App() {
 
@@ -19,15 +18,15 @@ function App() {
   return (
     <div className="App ">
       {/* NAVBAR */}
-      <nav className="navbar mb-4 navfillwidth bg-danger">
-        <span className="navbar-brand mb-0 h1" style={{ color: "#FFFFFF" }}>
-          D&D Character Creator
+      <nav className="navbar mb-4 navfillwidth bg-secondary justify-content-center">
+        <span className="navbar-brand mb-0 h1 " style={{ color: "#FFFFFF" }}>
+          D&D Character Sheet 🧙
         </span>
       </nav>
       {/* TOP SECTION */}
       <div className="container-flex">
         <div className="row mb-4 gx-3" style={{ margin: "auto" }}>
-          <div className="col-12 col-lg-2 bg-light border border-danger rounded mr-3 ">
+          <div className="col-12 col-lg-2 bg-light border border-secondary rounded mr-3 ">
             <img src={DnDLogo} alt="dnd-logo" className="dndlogo" />
 
             <TopSection label="CHARACTER NAME" randomName={characterName} />
@@ -35,11 +34,14 @@ function App() {
               Randomize 🎲!
             </a>
           </div>
-          <div class="col-sm-12 d-sm-block d-md-none mb-1">&nbsp;</div>
-          <div className="col border border-danger rounded bg-light">
+          <div class="col-sm-12 d-sm-block d-lg-none mb-1">&nbsp;</div>
+          <div
+            id="mainbox"
+            className="col border border-secondary rounded bg-light"
+          >
             <div className="row">
               <div class="form-group col text-center topsectiondropdown">
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="class">
                   <option>Cleric</option>
                   <option>Monk</option>
                   <option>Ranger</option>
@@ -53,7 +55,7 @@ function App() {
                   <option>Warlock</option>
                   <option>Rogue</option>
                 </select>
-                <label for="exampleFormControlSelect1">CLASS</label>
+                <label for="class">CLASS</label>
               </div>
               <TopSection label="LEVEL" />
               <TopSection label="BACKGROUND" />
@@ -61,7 +63,7 @@ function App() {
 
             <div className="row ">
               <div class="form-group col text-center topsectiondropdown">
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="race">
                   <option>Elf</option>
                   <option>Human</option>
                   <option>Half-elf</option>
@@ -72,7 +74,7 @@ function App() {
                   <option>Tiefling</option>
                   <option>Half-Orc</option>
                 </select>
-                <label for="exampleFormControlSelect1">RACE</label>
+                <label for="race">RACE</label>
               </div>
               <TopSection label="ALIGNMENT" />
               <TopSection label="PLAYER NAME" />
@@ -84,7 +86,7 @@ function App() {
       <div className="container-flex">
         <div className="row" style={{ margin: "auto" }}>
           {/* STATBOX */}
-          <div className="col col-lg-2 col-sm-3 mr-3 border border-danger rounded bg-danger">
+          <div className="col col-lg-2 col-sm-3 mr-3 border border-secondary rounded bg-secondary">
             <StatBox stats="STRENGTH" />
             <StatBox stats="DEXTERITY" />
             <StatBox stats="CONSTITUION" />
@@ -93,25 +95,43 @@ function App() {
             <StatBox stats="CHARISMA" />
           </div>
 
-          <div className="col col-lg-2 col-sm-3 bg-danger rounded">
-            {/* INSPIRATION */}
-            {/* <div className="d-flex justify-content-start">
-              <input
-                className="dndstatrow form-control text-center align-self-center"
-                type="text"
-              ></input>
-              <div className="col bg-light text-center border border-danger rounded align-self-center">
-                PROFICIENCY BONUS
+          <div className="col col-lg-2 col-sm-3 bg-secondary rounded">
+            <div className="container">
+              <div
+                className="row position-relative bg-light my-3 border rounded d-flex justify-content-center
+              align-items-center"
+              >
+                <input
+                  id="proficiency"
+                  className="dndinputcircle form-control"
+                  type="text"
+                ></input>
+                <div class="ml-3 d-sm-block d-lg-none">&nbsp;</div>
+                <div className="">
+                  <label for="proficiency" className="h6">
+                    PROFICIENCY
+                  </label>
+                </div>
               </div>
-            </div> */}
-            <div className="col">
-              <input className="dndstatrow form-control text-center align-self-center" type="text"></input>
             </div>
-            <div className="col bg-light text-center border border-danger rounded align-self-center">
-              PROFICIENCY BONUS
+            <div className="container">
+              <div
+                className="row position-relative bg-light border rounded d-flex justify-content-center
+              align-items-center"
+              >
+                <input
+                  id="INSPRIRATION"
+                  className="dndinputbox form-control"
+                  type="text"
+                ></input>
+                <div class="ml-3 d-sm-block d-lg-none">&nbsp;</div>
+                <div className="">
+                  <label for="INSPIRATION" className="h6">
+                    INSPIRATION
+                  </label>
+                </div>
+              </div>
             </div>
-
-            <SavingThrows />
           </div>
           <div className="col-md-4">3</div>
         </div>
