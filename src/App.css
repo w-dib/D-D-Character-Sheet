@@ -84,3 +84,40 @@ max-width:80%;
 .footertext{
   font-size:10px;
 }
+
+.armorclass{
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  max-width: 6rem;
+  height:5.5rem;
+}
+
+.initspeed{
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  max-width: 6rem;
+  height:5.5rem;
+}
+
+.notes{
+  line-height: 25px;
+  background-image: linear-gradient(transparent,transparent 24px,#cfcfcf 0);
+  background-size: 100% 25px;
+  width: 100%;
+  border: none;
+  resize: none;
+  background-position-y: 1.5px;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.divider{
+  border-left: 1px solid #6c757d;
+  height: 5.5rem;
+  transform: rotate(45deg);
+}

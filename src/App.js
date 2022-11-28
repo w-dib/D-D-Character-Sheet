@@ -35,7 +35,7 @@ function App() {
               Randomize 🎲!
             </a>
           </div>
-          <div class="col-sm-12 d-sm-block d-lg-none mb-1">&nbsp;</div>
+          <div class="col-sm-12 d-sm-block d-lg-none">&nbsp;</div>
           <div
             id="mainbox"
             className="col border border-secondary rounded bg-light"
@@ -85,7 +85,7 @@ function App() {
       </div>
       {/* MAIN SECTION */}
       <div className="container-flex">
-        <div className="row" style={{ margin: "auto" }}>
+        <div className="row " style={{ margin: "auto" }}>
           {/* LEFT SIDE */}
           <div className="col col-lg-2 col-sm-3 mr-1 border border-secondary rounded bg-secondary">
             <StatBox stats="STRENGTH" />
@@ -96,15 +96,12 @@ function App() {
             <StatBox stats="CHARISMA" />
           </div>
           {/* MIDDLE SIDE */}
-          <div className="col col-lg-2 col-sm-3 bg-secondary rounded">
+          <div className="col col-lg-2 col-sm-3 mr-md-1 bg-secondary rounded">
             <div className="container">
-              <div
-                className="row position-relative bg-light my-3 border rounded d-flex justify-content-center
-              align-items-center"
-              >
+              <div className="row position-relative bg-light my-3 border rounded justify-content-center">
                 <input
                   id="proficiency"
-                  className="dndinputcircle form-control"
+                  className="dndinputcircle form-control text-center p-0"
                   type="text"
                 ></input>
                 <div class="ml-3 d-sm-block d-lg-none">&nbsp;</div>
@@ -116,13 +113,10 @@ function App() {
               </div>
             </div>
             <div className="container">
-              <div
-                className="row position-relative bg-light mb-3 border rounded d-flex justify-content-center
-              align-items-center"
-              >
+              <div className="row position-relative bg-light mb-3 border rounded justify-content-center">
                 <input
                   id="INSPRIRATION"
-                  className="dndinputbox form-control"
+                  className="dndinputbox form-control text-center p-0"
                   type="text"
                 ></input>
                 <div class="ml-3 d-sm-block d-lg-none">&nbsp;</div>
@@ -135,19 +129,16 @@ function App() {
             </div>
 
             <div className="container">
-              <div
-                className="row position-relative bg-light border rounded d-flex justify-content-center
-              align-items-center"
-              >
+              <div className="row position-relative bg-light border rounded justify-content-center">
                 <input
                   id="PASSIVEWISDOM"
-                  className=" dndinputbox form-control"
+                  className=" dndinputbox form-control text-center p-0"
                   type="text"
                 ></input>
                 <div class="ml-3 d-sm-block d-lg-none">&nbsp;</div>
                 <div className="">
                   <label for="PASSIVEWISDOM" className="h6">
-                    PERCEPTION
+                    P-PERCEPTION
                   </label>
                 </div>
               </div>
@@ -160,7 +151,7 @@ function App() {
                 <label for="SAVINGTHROWS" className="h6">
                   SAVING THROWS
                 </label>
-                <Skills skills="Strength" />
+                <Skills skills="STRENGTH" />
                 <Skills skills="DEXTERITY" />
                 <Skills skills="CONSTITUTION" />
                 <Skills skills="INTELLIGENCE" />
@@ -169,7 +160,10 @@ function App() {
               </div>
             </div>
             <div className="container-flex">
-              <div id="SKILLS" className="row-12 bg-light my-3 border rounded pb-2">
+              <div
+                id="SKILLS"
+                className="row-12 bg-light my-3 border rounded pb-2"
+              >
                 <label for="SKILLS" className="h6">
                   SKILLS
                 </label>
@@ -194,11 +188,92 @@ function App() {
               </div>
             </div>
           </div>
-
+          <div class="col-sm-12 d-sm-block d-lg-none">&nbsp;</div>
           {/* RIGHT SIDE */}
-          <div className="col-md-4">3</div>
+          <div className="col-lg-3 col-sm-3 mr-md-1 bg-secondary rounded p-0">
+            <div className="row mx-3 justify-content-around">
+              <div className="my-2 bg-light border armorclass">
+                <input
+                  id="ARMORCLASS"
+                  className=" form-control text-center p-0"
+                  type="text"
+                ></input>
+                <label for="ARMORCLASS" className="h6">
+                  ARMOR CLASS
+                </label>
+              </div>
+              <div className="my-2 bg-light border initspeed">
+                <input
+                  id="INITIATIVE"
+                  className=" form-control text-center p-0"
+                  type="text"
+                ></input>
+                <p className="mb-2">🏹</p>
+                <label for="INITIATIVE" className="h6">
+                  INITIATIVE
+                </label>
+              </div>
+              <div className="my-2 bg-light border initspeed">
+                <input
+                  id="SPEED"
+                  className=" form-control text-center p-0"
+                  type="text"
+                ></input>
+                <p className="mb-2">🏃</p>
+                <label for="SPEED" className="h6">
+                  SPEED
+                </label>
+              </div>
+            </div>
+            <div className="container-fluid">
+              <div className="col-12 bg-light my-3 border rounded pb-2">
+                <div className="row justify-content-around">
+                  <div className="my-2 bg-light border initspeed">
+                    <input
+                      id="HP"
+                      className=" form-control text-center p-0"
+                      type="text"
+                    ></input>
+                    <p className="mb-2">❤️🤍🤍</p>
+                    <label for="HP" className="h6">
+                      HP
+                    </label>
+                  </div>
+<div className="divider align-self-center"></div>
+                  <div className="my-2 bg-light border initspeed">
+                    <input
+                      id="HP"
+                      className=" form-control text-center p-0"
+                      type="text"
+                    ></input>
+                    <p className="mb-2">❤️❤️❤️</p>
+                    <label for="HP" className="h6">
+                      MAX HP
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 d-sm-block d-lg-none">&nbsp;</div>
+          {/* NOTES SECTION */}
+          <div className="col bg-secondary rounded">
+            <form>
+              <div className="form-group mt-1 ">
+                <label className="h6 text-white " for="NOTES">
+                  📚 NOTES
+                </label>
+                <textarea
+                  class="form-control notes my-1 h-25"
+                  id="NOTES"
+                  rows="25"
+                ></textarea>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
+
       {/* FOOTER SECTION */}
       <footer class="my-4 border-top">
         <span class="mb-3 mb-md-0 text-muted footertext">

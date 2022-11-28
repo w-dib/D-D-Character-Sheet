@@ -23,7 +23,7 @@ const decrementCount = () => {
 }
 
     return (
-      <div className="col bg-light text-center border rounded-top mt-2 mb-2">
+      <div className="col bg-light text-center border rounded-top mt-2 mb-4">
         <label>{props.stats}</label>
         <div className="display-4 text-muted d-and-d-statbox-modifier">{modifier}</div>
         <div className="row justify-content-center mb-2">
