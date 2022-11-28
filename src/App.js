@@ -27,7 +27,7 @@ function App() {
       {/* TOP SECTION */}
       <div className="container-flex">
         <div className="row mb-4 gx-3" style={{ margin: "auto" }}>
-          <div className="col-12 col-lg-2 bg-light border border-secondary rounded mr-3 ">
+          <div className="col-12 col-lg-2 bg-light border border-secondary rounded mr-1 ">
             <img src={DnDLogo} alt="dnd-logo" className="dndlogo" />
 
             <TopSection label="CHARACTER NAME" randomName={characterName} />
@@ -87,7 +87,7 @@ function App() {
       <div className="container-flex">
         <div className="row" style={{ margin: "auto" }}>
           {/* LEFT SIDE */}
-          <div className="col col-lg-2 col-sm-3 mr-3 border border-secondary rounded bg-secondary">
+          <div className="col col-lg-2 col-sm-3 mr-1 border border-secondary rounded bg-secondary">
             <StatBox stats="STRENGTH" />
             <StatBox stats="DEXTERITY" />
             <StatBox stats="CONSTITUION" />
@@ -117,7 +117,7 @@ function App() {
             </div>
             <div className="container">
               <div
-                className="row position-relative bg-light border rounded d-flex justify-content-center
+                className="row position-relative bg-light mb-3 border rounded d-flex justify-content-center
               align-items-center"
               >
                 <input
@@ -133,30 +133,66 @@ function App() {
                 </div>
               </div>
             </div>
+
+            <div className="container">
+              <div
+                className="row position-relative bg-light border rounded d-flex justify-content-center
+              align-items-center"
+              >
+                <input
+                  id="PASSIVEWISDOM"
+                  className=" dndinputbox form-control"
+                  type="text"
+                ></input>
+                <div class="ml-3 d-sm-block d-lg-none">&nbsp;</div>
+                <div className="">
+                  <label for="PASSIVEWISDOM" className="h6">
+                    PERCEPTION
+                  </label>
+                </div>
+              </div>
+            </div>
             <div className="container-flex">
-           <div
-             className="row-12 bg-light my-3 border rounded"
-           >
-            <Skills skills="Acrobatics (Dex)"/>
-            <Skills skills="Animal Handling (Wis)"/>
-            <Skills skills="Arcana (Int)"/>
-            <Skills skills="Athletics (Str)"/>
-            <Skills skills="Deception (Cha)"/>
-            <Skills skills="History (Int)"/>
-            <Skills skills="Insight (Wis)"/>
-            <Skills skills="Intimidation (Cha)"/>
-            <Skills skills="Investigation (Int)"/>
-            <Skills skills="Medicine (Wis)"/>
-            <Skills skills="Nature (Int)"/>
-            <Skills skills="Perception (Wis)"/>
-            <Skills skills="Performance (Cha)"/>
-            <Skills skills="Persuasion (Cha)"/>
-            <Skills skills="Religion (Int)"/>
-            <Skills skills="Sleight of Hand (Dex)"/>
-            <Skills skills="Stealth (Dex)"/>
-            <Skills skills="Survival (Wis)"/>
-      </div>
-    </div>
+              <div
+                id="SAVINGTHROWS"
+                className="row-12 bg-light my-3 border rounded pb-2"
+              >
+                <label for="SAVINGTHROWS" className="h6">
+                  SAVING THROWS
+                </label>
+                <Skills skills="Strength" />
+                <Skills skills="DEXTERITY" />
+                <Skills skills="CONSTITUTION" />
+                <Skills skills="INTELLIGENCE" />
+                <Skills skills="WISDOM" />
+                <Skills skills="CHARISMA" />
+              </div>
+            </div>
+            <div className="container-flex">
+              <div id="SKILLS" className="row-12 bg-light my-3 border rounded pb-2">
+                <label for="SKILLS" className="h6">
+                  SKILLS
+                </label>
+                <Skills skills="Acrobatics (Dex)" />
+                <Skills skills="Animal Handling (Wis)" />
+                <Skills skills="Arcana (Int)" />
+                <Skills skills="Athletics (Str)" />
+                <Skills skills="Deception (Cha)" />
+                <Skills skills="History (Int)" />
+                <Skills skills="Insight (Wis)" />
+                <Skills skills="Intimidation (Cha)" />
+                <Skills skills="Investigation (Int)" />
+                <Skills skills="Medicine (Wis)" />
+                <Skills skills="Nature (Int)" />
+                <Skills skills="Perception (Wis)" />
+                <Skills skills="Performance (Cha)" />
+                <Skills skills="Persuasion (Cha)" />
+                <Skills skills="Religion (Int)" />
+                <Skills skills="Sleight of Hand (Dex)" />
+                <Skills skills="Stealth (Dex)" />
+                <Skills skills="Survival (Wis)" />
+              </div>
+            </div>
           </div>
 
           {/* RIGHT SIDE */}

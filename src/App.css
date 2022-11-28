@@ -58,18 +58,28 @@ max-width:80%;
 .dndinputbox{
   border-radius: 20%;
   position:absolute;
-  left:-.25rem;
-  top:-.25rem;
-  width: 32px;
-  height: 32px;
+  left:-.4rem;
+  top:-.4rem;
+  width: 37px;
+  height: 37px;
   border: 2px solid #000;
   font-weight: 700;
 }
 
 .dndinputcheck{
   position:absolute;
-  left:1.25rem;
+  left:1.4rem;
+  top:0.2rem;
   }
+
+.underlinediput{
+  background: none;
+  border: none;
+  border-bottom: 1px solid #000;
+  width: 22px;
+  margin-right:5px;
+  text-align: center;
+}
 
 .footertext{
   font-size:10px;
